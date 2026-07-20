@@ -1,5 +1,5 @@
 #pragma author glitchgod
-#pragma description Harmonix ARK V2 (Amplitude Final)
+#pragma description Harmonix ARK V1 (Amplitude Beta)
 #pragma endian little
 
 // Based on PikminGuts92's 010 Pattern
@@ -13,23 +13,35 @@ import std.io;
 import std.mem;
 
 struct FileEntry {
-    u32 offset;
     u32 fileNameIndex;
     u32 folderNameIndex;
+    u32 offset;
     u32 size;
     u32 inflatedSize;
+    
+    std::mem::Bytes<size> @ offset [[name("File")]];
+    std::print("{}/{} ({})", folderNameIndex, fileNameIndex, size);
+};
+
+struct NumString {
+    u32 count;
+    
+    if (count > 0)
+    {
+        char text[count];
+    }
 };
 
 
-struct ArkV2File {
+struct ArkV1File {
    u32 Version;
    u32 entryCount;
    FileEntry file_entries[entryCount][[name("File Entries")]];
    u32 stringTableSize;
-   char StringTable[stringTableSize];
-   u32 stringIndexCount;
-   u32 stringIndexEntries[stringIndexCount];
    
+   NumString stringTable[stringTableSize];
+   
+
    
    std::print("-" * 50);
    std::print("Stats:");
@@ -40,4 +52,4 @@ struct ArkV2File {
 
 
 
-ArkV2File Ark @ 0x00;
+ArkV1File Ark @ 0x00;

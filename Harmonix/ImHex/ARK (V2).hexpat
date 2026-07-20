@@ -18,6 +18,9 @@ struct FileEntry {
     u32 folderNameIndex;
     u32 size;
     u32 inflatedSize;
+    
+    std::mem::Bytes<size> @ offset [[name("File")]];
+    std::print("{}/{} ({})", folderNameIndex, fileNameIndex, size);  
 };
 
 
@@ -30,14 +33,10 @@ struct ArkV2File {
    u32 stringIndexCount;
    u32 stringIndexEntries[stringIndexCount];
    
-   
    std::print("-" * 50);
    std::print("Stats:");
    std::print("{} Files entries.", entryCount);
    std::print("-" * 50);
 };
-
-
-
 
 ArkV2File Ark @ 0x00;

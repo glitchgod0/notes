@@ -69,10 +69,10 @@ struct FreqArkFile {
 
     char string_table[Header.total_hdr_size - $] @ Header.string_table_offset [[name("String Table")]];
     
-   std::print("-" * 50);
-   std::print("Stats:");
-   std::print("{} Files, {} Folders.", Header.file_entry_count, Header.folder_entry_count);
-   std::print("-" * 50);
+    std::print("-" * 50);
+    std::print("Stats:");
+    std::print("{} Files, {} Folders.", Header.file_entry_count, Header.folder_entry_count);
+    std::print("-" * 50);
 };
 
 FreqArkFile Ark @ 0x00;
