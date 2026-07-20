@@ -1,5 +1,5 @@
 #pragma author glitchgod
-#pragma description Harmonix ARK v1 (used in Frequency)
+#pragma description Harmonix ARK v0 (used in Frequency)
 #pragma endian little
 #pragma magic [ 41 52 4B 00 ] @ 0
 
