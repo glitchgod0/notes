@@ -1,6 +1,9 @@
 #pragma author glitchgod
-#pragma description Harmonix ARK (Amplitude Final)
+#pragma description Harmonix ARK V2 (Amplitude Final)
 #pragma endian little
+
+// Based on PikminGuts92's 010 Pattern
+// https://github.com/PikminGuts92/re-notes/blob/master/templates/amp_ark.bt
 
 import type.magic;
 import type.size;
