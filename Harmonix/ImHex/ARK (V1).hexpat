@@ -1,5 +1,5 @@
 #pragma author glitchgod
-#pragma description Harmonix ARK (Amplitude Final)
+#pragma description Harmonix ARK V2 (Amplitude Final)
 #pragma endian little
 
 import type.magic;
