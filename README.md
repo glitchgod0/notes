@@ -1,3 +1,4 @@
-# notes
-list of various notes for things ive dabbled with.
-note: this is not supposed to be comprehensive documentation.
+# Notes
+A grouping of various notes and ImHex patterns for things ive dabbled with.
+
+
