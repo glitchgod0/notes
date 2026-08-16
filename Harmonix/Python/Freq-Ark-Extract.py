@@ -32,7 +32,6 @@ def helper_write_data(folder_name, file_name, file_offset, file_size):
 
 	ark_name = sys.argv[1][:-4]
 	processed_name = ark_name + "/" + folder_name + "/" + file_name
-	print(processed_name)
 	
 	os.makedirs(os.path.dirname(processed_name), exist_ok=True)
 	with open(processed_name, "wb") as f:
